@@ -1,0 +1,77 @@
+/* This is just to make the example nicer */
+@import "https://fonts.googleapis.com/css?family=Nunito:200,600";
+html, body {
+    background-color: #fff;
+    color: #636b6f;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 200;
+    height: 100vh;
+    margin: 0;
+}
+label{
+
+}
+
+form {
+    max-width: 200px;
+}
+
+p * {
+    display: block;
+}
+
+input.mail {
+    -webkit-appearance: none;
+
+    width: 100%;
+    border: 1px solid #333;
+    margin: 0;
+
+    font-family: inherit;
+    font-size: 90%;
+
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* This is our style for the invalid fields */
+input.invalid{
+    border-color: #900;
+    background-color: #FDD;
+}
+
+input:focus.invalid {
+    outline: none;
+}
+
+/* This is the style of our error messages */
+.error {
+    width  : 100%;
+    padding: 0;
+
+    font-size: 80%;
+    color: white;
+    background-color: #900;
+    border-radius: 0 0 5px 5px;
+
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.error.active {
+    padding: 0.3em;
+}
+
+#main{
+background-color: #1d643b;
+}
+
+.links {
+    color: #636b6f;
+    padding: 0 25px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
