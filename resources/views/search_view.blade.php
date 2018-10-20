@@ -1,63 +1,43 @@
-<!
-<html>
-<head>
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
-    <link href="{{ URL::asset('css/formValidation.css')}}" rel="stylesheet" type="text/css">    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Search View</title>
-</head>
-<body>
-{{--<form action="{{route('search')}}" method="post">
-    {{ csrf_field() }}
-    Name:
-    <input type="text" name="Name" >
-    <br>
-    Phone:
-    <input type="tel" name="Phone"  pattern="phone">
-    <br>
-    Email:
-    <input type="email" name="Email">
-    <br>
-    Username:
-    <input type="text" name="Username">
-    <br>
-    ID:
-    <input type="text" name="ID">
-    <br>
-    <input type="submit">
-</form>--}}
-<div  class="flex-center position-ref full-height links" align ="center">
-<form {{--action="{{route('search')}}" method="post"--}}>
-    {{csrf_field()}}
-    <p>
-        <label for="name">name:</label>
-        <input type="text" id="name" name="name">
-    </p>
-    <p>
-        <label for="ph">phone:</label>
-        <input type="text" id="ph" name="name" pattern="[0-9]{10}" placeholder="05XXXXXXXX" title="phone number 10 digit 05XXXXXXXX">
-    </p>
-    <p>
-        <label for="name">username:</label>
-        <input type="text" id="name" name="name">
-    </p>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link href="{{ URL::asset('css/formValidation.css')}}" rel="stylesheet" type="text/css">    <meta charset="UTF-8">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
 
-    <p>
-        <label for="t2">e-mail:</label>
-        <input type="email" id="t2" name="email">
-    </p>
+<div class="container contact-form">
+    <div class="contact-image">
+        <img src="https://visualpharm.com/assets/217/Life%20Cycle-595b40b75ba036ed117d9ef0.svg" alt="rocket_contact"/>
+    </div>
+    <form method="post" action="{{route("result")}}">
+        {{csrf_field()}}
+        <h3>Search on Person</h3>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 col-centered">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" class="form-control" placeholder="Name" value="" />
+                </div>
 
-    <p>
-        <label for="t5">ID:</label>
-        <input type="tel" id="t5" name="id" pattern="[0-9]{10}" title="Enter National ID number 10 digits">
-    </p>
+                <div class="form-group">
+                    <input type="text" id="ph" name="phone" class="form-control" pattern="[0-9]{10}" placeholder="05XXXXXXXX" title="phone number 10 digit 05XXXXXXXX" />
+                </div>
 
-    <p>
-        <button>Submit</button>
-    </p>
-</form>
+                <div class="form-group">
+                    <input type="email" id="t2" name="email" class="form-control" placeholder="Email" value="" />
+                </div>
+
+                <div class="form-group">
+                    <input type="text" id="name" name="username" class="form-control" placeholder="username" value="" />
+                </div>
+
+                <div class="form-group">
+                    <input type="tel" id="name" name="id" class="form-control" placeholder="National ID" pattern="[0-9]{10}" title="Enter National ID number 10 digits" />
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" name="btnSubmit" class="btnContact" value="Search" />
+                </div>
+            </div>
+        </div>
+    </form>
+@includeWhen($is_result ,"result_view")
 </div>
-</body>
-</html>

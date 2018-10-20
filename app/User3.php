@@ -7,10 +7,10 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Database\Eloquent\Model;
 
-class User extends Authenticatable
+class User3 extends Authenticatable
 {
     use Notifiable;
-    protected $table = 'users';
+    protected $table = 'users3';
 
     /**
      * The attributes that are mass assignable.
@@ -61,7 +61,7 @@ class User extends Authenticatable
         if (empty($where_array))
             return [];
 
-            $result = User::where($where_array)->get();
+            $result = User3::where($where_array)->get();
 
     return $result;
     }

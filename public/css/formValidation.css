@@ -1,77 +1,91 @@
-/* This is just to make the example nicer */
-@import "https://fonts.googleapis.com/css?family=Nunito:200,600";
-html, body {
-    background-color: #fff;
-    color: #636b6f;
-    font-family: 'Nunito', sans-serif;
-    font-weight: 200;
-    height: 100vh;
-    margin: 0;
+body{
+    background: -webkit-linear-gradient(left, #0072ff, #00c6ff);
 }
-label{
-
+.contact-form{
+    background: #fff;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    width: 70%;
 }
-
-form {
-    max-width: 200px;
+.contact-form .form-control{
+    border-radius:1rem;
 }
-
-p * {
-    display: block;
+.contact-image{
+    text-align: center;
 }
-
-input.mail {
-    -webkit-appearance: none;
-
+.col-centered{
+    margin: 0 auto;
+    float: none;
+}
+.contact-image img{
+    border-radius: 6rem;
+    width: 20%;
+    margin-top: -3%;
+    /*transform: rotate(29deg);*/
+}
+.contact-form form{
+    padding: 14%;
+}
+.contact-form form .row{
+    margin-bottom: -7%;
+}
+.contact-form h3{
+    margin-bottom: 8%;
+    margin-top: -10%;
+    text-align: center;
+    color: #0062cc;
+}
+.contact-form .btnContact {
     width: 100%;
-    border: 1px solid #333;
-    margin: 0;
-
-    font-family: inherit;
-    font-size: 90%;
-
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-/* This is our style for the invalid fields */
-input.invalid{
-    border-color: #900;
-    background-color: #FDD;
-}
-
-input:focus.invalid {
-    outline: none;
-}
-
-/* This is the style of our error messages */
-.error {
-    width  : 100%;
-    padding: 0;
-
-    font-size: 80%;
-    color: white;
-    background-color: #900;
-    border-radius: 0 0 5px 5px;
-
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-.error.active {
-    padding: 0.3em;
-}
-
-#main{
-background-color: #1d643b;
-}
-
-.links {
-    color: #636b6f;
-    padding: 0 25px;
-    font-size: 12px;
+    border: none;
+    border-radius: 1rem;
+    padding: 1.5%;
+    background: #dc3545;
     font-weight: 600;
-    letter-spacing: .1rem;
-    text-decoration: none;
-    text-transform: uppercase;
+    color: #fff;
+    cursor: pointer;
+}
+h3#record-title{
+    width: 70%;
+    border: 2px;
+    border-radius: 1rem;
+    padding: 1.5%;
+    background: #0062cc;
+    font-weight: 600;
+    color: #fff;
+    margin: auto;
+}
+
+h3#no-result {
+    width: 70%;
+    border: none;
+    border-radius: 1rem;
+    padding: 1.5%;
+    background: #dc3545;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+}
+
+h3#db-title {
+    width: 70%;
+    border: none;
+    border-radius: 1rem;
+    padding: 1.5%;
+    background: #5cd08d;
+    font-weight: 600;
+    color: #fff;
+    margin: auto;
+}
+
+
+.btnContactSubmit
+{
+    width: 50%;
+    border-radius: 1rem;
+    padding: 1.5%;
+    color: #fff;
+    background-color: #0062cc;
+    border: none;
+    cursor: pointer;
 }
