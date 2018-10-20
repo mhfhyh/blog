@@ -1,9 +1,5 @@
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<link href="{{ URL::asset('css/formValidation.css')}}" rel="stylesheet" type="text/css">    <meta charset="UTF-8">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
-
+@extends("layouts.master")
+@section('content')
 <div class="container contact-form">
     <div class="contact-image">
         <img src="https://visualpharm.com/assets/217/Life%20Cycle-595b40b75ba036ed117d9ef0.svg" alt="rocket_contact"/>
@@ -41,3 +37,4 @@
     </form>
 @includeWhen($is_result ,"result_view")
 </div>
+@endsection
