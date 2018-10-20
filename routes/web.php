@@ -11,12 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-Route::get('/search', "Controller@show_search_view")->name("search");
-
+Route::get('/', "Controller@show_search_view")->name("search");
+Route::redirect('/search', '/');
 Route::post('/search',"Controller@show_search_result")->name("result");
 
 
