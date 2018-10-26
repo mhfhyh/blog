@@ -33,7 +33,7 @@
         </div>
 
         <div class="form-group">
-            phone:<input readonly class="form-control" pattern="[0-9]{10}" placeholder=""  />
+            phone:<input readonly class="form-control" pattern="[0-9]{10}" placeholder="" value="{{$person->phone}}"  />
         </div>
 
         <div class="form-group">
